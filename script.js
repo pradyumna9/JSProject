@@ -99,7 +99,7 @@ else{
 /***********************
  * FUNCTIONS IN JS
  */
-
+/*
  function calculateAge(birthyear){
      return 2019-birthyear;
  }
@@ -132,3 +132,67 @@ var profession = function(job,firstName){
 
 profession('Teacher','Pradyumna');
 profession('Carpenter','Itishree');
+*/
+
+
+/*****************************************
+ * Arrays
+ */
+/*
+ var days = ['sun','mon','tue','wed','thu','fri','sat'];
+ var cars = new Array('maruti','swift','wagnor');
+
+ console.log(days);
+ console.log(cars);
+
+ //Array contain multiple data types in js
+ var pk = ['pradyumna','das',29,false];
+ console.log(pk[2]);
+
+ //pk[8]='software enginner';
+ //console.log(pk);
+ pk[pk.length]='Software Engineer';
+ console.log(pk);
+
+ //Methods in Array
+
+ console.log('Length of the pk array:'+pk.length);
+ //Add element in the last
+ pk.push('Itishree');
+ console.log(pk);
+ //Add element in the first
+ pk.unshift('Mr.');
+ console.log(pk);
+ //delete element from the end
+ pk.pop();
+ console.log(pk);
+ //Delete element at the begining
+ pk.shift();
+ console.log(pk)
+ //search an element in the array
+ console.log('Index of element in the array:'+pk.indexOf('Software Engineer'));
+ pk.indexOf('Software Engineer')=== -1?console.log('Pradyumna is a fraud'):console.log('Pradyumna is a Software Engineer');
+ */
+
+ /***********************
+  * Code Challeneg
+  */
+function tipCalculator(bill){
+    var percentage;
+    if(bill<50){
+        percentage = .2;
+    }
+    else if(bill>=50 && bill<=200){
+        percentage = .15;
+    }
+    else if(bill>200){
+        percentage = .1;
+    }
+    return bill*percentage;
+}
+
+var bills = [124,48,268];
+var tips = [tipCalculator(bills[0]),tipCalculator(bills[1]),tipCalculator(bills[2])];
+console.log('TIPS:'+tips);
+var totalBills = [bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]]
+console.log('Total Bill with tips:'+totalBills);
